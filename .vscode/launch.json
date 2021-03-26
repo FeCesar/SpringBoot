@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AcademyApplication<academy>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.com.academy.AcademyApplication",
+            "projectName": "academy",
+            "args": ""
+        }
+    ]
+}
