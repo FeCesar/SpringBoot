@@ -5,12 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Felipe Cesar">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Font -->
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link href = "https://fonts.googleapis.com/css2? family = Noto + Sans + JP: wght @ 100; 400; 700 & display = swap "rel =" stylesheet ">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+
     <title>Academy - Home</title>
 </head>
 <body>
     
-    <h2 th:text="${msg}"></h2>
-    <p>Olá Mundo Spring!</p>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4A148C;">
+            <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Logo" width="180px"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navMobile" class="navbar-collapse collapse justify-content-end">
+                <a href="#" class="nav-item nav-link"><i class="fa fa-home"></i> Home</a>
+                <a href="#" class="nav-item nav-link"><i class="fa fa-user"></i> Cadastrar Alunos</a>
+                <a href="#" class="nav-item nav-link"><i class="fa fa-search"></i> Pesquisar Aluno</a>
+                <a href="#" class="nav-item nav-link btn-danger"><i class="fa fa-times"></i> Sair</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="neo-section" style="background-image: url('images/bg-index.jpg');">
+
+        <div class="shadow"></div>
+        <div class="neo-container center">
+            <h1>Sistema de Gerenciamento de Alunos</h1>
+        
+            <div class="buttons">
+                <div class="wm">
+                    <h5 class="btn">Cadastrar Aluno</h5>
+                </div>
+
+                <div class="wm">
+                    <h5 class="btn justify-content-center">Encontrar Aluno</h5>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span>Todos os Direitos Reservados - 2021 &copy; Felipe Cesar</span>
+    </footer>
+
+
+
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>
