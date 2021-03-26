@@ -22,29 +22,33 @@
     <title>Academy - Home</title>
 </head>
 <body>
+    
+    <!-- Header -->
+    <header th:fragment="header">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4A148C;">
+            <a th:href="@{/}" class="navbar-brand"><img src="images/logo.png" alt="Logo" width="180px"></a>
 
-    <div th:replace="fragmentos/fragmentos :: header"></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <section class="neo-section" style="background-image: url('images/bg-index.jpg');">
-        <div class="shadow"></div>
-        <div class="neo-container center">
-            <h1>Sistema de Gerenciamento de Alunos</h1>
-        
-            <div class="buttons">
-                <div class="wm">
-                    <h5 class="btn">Cadastrar Aluno</h5>
-                </div>
-
-                <div class="wm">
-                    <h5 class="btn justify-content-center">Encontrar Aluno</h5>
-                </div>
-
-                <div class="clear"></div>
+            <div id="navMobile" class="navbar-collapse collapse justify-content-end">
+                <a th:href="@{/}" class="nav-item nav-link"><i class="fa fa-home"></i> Home</a>
+                <a href="#" class="nav-item nav-link"><i class="fa fa-user"></i> Cadastrar Alunos</a>
+                <a href="#" class="nav-item nav-link"><i class="fa fa-search"></i> Pesquisar Aluno</a>
+                <a href="#" class="nav-item nav-link btn-danger"><i class="fa fa-times"></i> Sair</a>
             </div>
-        </div>
-    </section>
 
-    <div th:replace="fragmentos/fragmentos :: footer"></div>
+        </nav>
+    </header>
+
+
+    <!-- Footer -->
+    <footer class="footer" th:fragment="footer">
+        <span>Todos os Direitos Reservados - 2021 &copy; Felipe Cesar</span>
+    </footer>
+
+
 
     <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
