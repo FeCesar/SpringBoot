@@ -2,12 +2,15 @@ package br.com.academy.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import br.com.academy.enums.Curso;
 import br.com.academy.enums.Status;
+import br.com.academy.enums.Turno;
 
 @Entity
 public class Aluno {
@@ -21,16 +24,19 @@ public class Aluno {
     private String nome;
 
     @Column(name = "curso")
+    @Enumerated(EnumType.STRING)
     private Curso curso;
 
     @Column(name = "matricula")
     private String matricula;
 
     @Column(name = "status")
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     @Column(name = "turno")
-    private String turno;
+    @Enumerated(EnumType.STRING)
+    private Turno turno;
 
 
     // Setters
@@ -45,9 +51,6 @@ public class Aluno {
     }
     public Status getStatus() {
         return status;
-    }
-    public void setTurno(String turno) {
-        this.turno = turno;
     }
     public Curso getCurso() {
         return curso;
@@ -66,7 +69,7 @@ public class Aluno {
     public void setStatus(Status status) {
         this.status = status;
     }
-    public String getTurno() {
+    public Turno getTurno() {
         return turno;
     }
     public void setCurso(Curso curso) {

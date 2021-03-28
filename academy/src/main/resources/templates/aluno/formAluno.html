@@ -25,12 +25,78 @@
 
     <div th:replace="fragmentos/fragmentos :: header"></div>
 
-    
+    <main class="container">
+
+        <h2 style="margin-top: 3%;">+ Inserir Alunos</h2>
+        <hr>
+        <br>
+        <form method="post" action="/InsertAlunos" th:object="${aluno}">
+
+            <div class="row">
+                <div class="col-md-6 form-group offset-md-3">
+                    <label for="name" style="font-weight: bold;">Nome do Aluno:</label>
+                    <input type="text" class="form-control" name="nome" id="name" placeholder="Ex.: Matheus José" th:field="*{nome}">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group offset-md-3">
+                    <label for="curso" style="font-weight: bold;">Curso: </label>
+                    <select name="curso" class="form-control" id="curso" th:field="*{curso}">
+                        <option th:each="curso : ${T(br.com.academy.enums.Curso).values()}" th:value="${curso}" th:text="${curso}">
+
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group offset-md-3">
+                    <label for="matricula" style="font-weight: bold;">Gerar Matrícula:</label>
+                    <input type="text" class="form-control" name="matricula" id="matricula"  th:field="*{matricula}">
+                    <h5 id="gerarMatricula" class="btn btn-dark" style="margin-top: 1%;">Gerar</h5>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group offset-md-3">
+                    <label for="status" style="font-weight: bold;">Status: </label>
+                    <select name="status" class="form-control" id="status" th:field="*{status}">
+                        <option th:each="status : ${T(br.com.academy.enums.Status).values()}" th:value="${status}" th:text="${status}">
+
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group offset-md-3">
+                    <label for="turno" style="font-weight: bold;">Turno:</label>
+                    <select name="turno" class="form-control" id="turno" th:field="*{turno}">
+                        <option th:each="turno : ${T(br.com.academy.enums.Turno).values()}" th:value="${turno}" th:text="${turno}">
+
+                        </option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row" style="margin-bottom: 5%;">
+                <button type="submit" class="btn btn-success offset-md-5">Salvar</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-outline-danger">Voltar</button>
+            </div>
+
+        </form>
+    </main>
+
 
     <div th:replace="fragmentos/fragmentos :: footer"></div>
 
     <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- MainJS -->
+    <script src="javascript/main.js"></script>
 
 </body>
 </html>

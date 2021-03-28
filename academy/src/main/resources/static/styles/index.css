@@ -75,7 +75,7 @@ a{
     z-index: 105;
 }
 
-.btn{
+.neo-section .btn{
     width: 280px;
     color: white !important;
     border-radius: 10px !important;
@@ -83,7 +83,7 @@ a{
     padding: 15px !important;
     font-weight: bold !important;
 }
-.btn:hover{
+.neo-section .btn:hover{
     color: #CE93D8 !important;
     background: rgba(0, 0, 0, 0.5);
 }
