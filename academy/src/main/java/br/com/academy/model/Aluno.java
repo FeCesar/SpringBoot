@@ -49,11 +49,14 @@ public class Aluno {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public Status getStatus() {
-        return status;
+    public void setStatus(Status status) {
+        this.status = status;
     }
-    public Curso getCurso() {
-        return curso;
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+    public void setTurno(Turno turno) {
+        this.turno = turno;
     }
 
     // Getters
@@ -66,14 +69,15 @@ public class Aluno {
     public String getNome() {
         return nome;
     }
-    public void setStatus(Status status) {
-        this.status = status;
-    }
     public Turno getTurno() {
         return turno;
     }
-    public void setCurso(Curso curso) {
-        this.curso = curso;
+    public Status getStatus() {
+        return status;
     }
+    public Curso getCurso() {
+        return curso;
+    }
+
 
 }

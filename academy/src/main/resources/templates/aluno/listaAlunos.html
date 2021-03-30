@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Felipe Cesar">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Font -->
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link href = "https://fonts.googleapis.com/css2? family = Noto + Sans + JP: wght @ 100; 400; 700 & display = swap "rel =" stylesheet ">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+
+    <title>Academy - Inserir Alunos</title>
+</head>
+<body>
+
+    <div th:replace="fragmentos/fragmentos :: header"></div>
+
+
+    <main class="container">
+        <h3 style="margin-top: 30px;">Últimos Alunos Adicionados</h3>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <th scope="col">Nome</th>
+                <th scope="col">Curso</th>
+                <th scope="col">Matricula</th>
+                <th scope="col">Status</th>
+                <th scope="col">Turno</th>
+            </thead>
+
+            <tbody>
+                <tr scope="row" th:each="alunos : ${alunosList}">
+                    <td th:text="${alunos.nome}"></td>
+                    <td th:text="${alunos.curso}"></td>
+                    <td th:text="${alunos.matricula}"></td>
+                    <td th:text="${alunos.status}"></td>
+                    <td th:text="${alunos.turno}"></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </main>
+
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- MainJS -->
+    <script src="javascript/main.js"></script>
+
+</body>
+</html>
