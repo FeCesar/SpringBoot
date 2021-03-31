@@ -25,6 +25,34 @@
 
     <div th:replace="fragmentos/fragmentos :: header"></div>
 
+    <div class="modal fade" id="modalPesquisa">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Encontre Um Aluno</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                
+                <form method="post" action="pesquisar-aluno" th:object="${aluno}">
+
+                    <div class="modal-body">
+                        <input type="text" placeholder="Digite o nome do Aluno" th:field="*{nome}" class="form-control" autocomplete="off">
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-success">Pesquisar</button>
+                    </div>
+                    
+                </form>
+
+            </div>
+        </div>
+    </div>
+
     <section class="neo-section" style="background-image: url('images/bg-index.jpg');">
         <div class="shadow"></div>
         <div class="neo-container center">
@@ -32,11 +60,11 @@
         
             <div class="buttons">
                 <div class="wm">
-                    <a th:href="@{formAluno}"><h5 class="btn">Cadastrar Aluno</h5></a>
+                    <a th:href="@{/formAluno}"><h5 class="btn">Cadastrar Aluno</h5></a>
                 </div>
 
                 <div class="wm">
-                    <h5 class="btn justify-content-center">Encontrar Aluno</h5>
+                    <a th:href="@{/filtro-alunos}"><h5 class="btn justify-content-center">Encontrar Aluno</h5></a>
                 </div>
 
                 <div class="clear"></div>

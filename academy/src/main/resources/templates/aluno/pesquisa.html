@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Felipe Cesar">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/index.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Font -->
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link href = "https://fonts.googleapis.com/css2? family = Noto + Sans + JP: wght @ 100; 400; 700 & display = swap "rel =" stylesheet ">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+
+    <title>Academy - Pesquisar</title>
+</head>
+<body>
+
+    <div th:replace="fragmentos/fragmentos :: header"></div>
+
+    <main class="container" style="margin-top: 50px">
+        <h3>Encontrar Aluno</h3>
+        <hr>
+        <br>
+
+        <div class="row">
+            <div class="card" style="width: 288px;">
+                <a th:href="@{/alunos-ativos}"><img src="images/Alunos-Ativos.jpg" alt="Alunos Ativos" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Alunos Ativos</h5>
+                    <p class="card-text">Busque por todos os alunos que estão ativos no sistema.</p>
+                    <a th:href="@{/alunos-ativos}" class="btn btn-outline-primary">Clique Aqui</a>
+                </div>
+            </div>
+
+            <div class="card ml-3" style="width: 288px;">
+                <a th:href="@{/alunos-inativos}"><img src="images/Alunos-Inativos.jpg" alt="Alunos Inativos" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Alunos Inativos</h5>
+                    <p class="card-text">Busque por todos os alunos que estão inativos no sistema.</p>
+                    <a th:href="@{/alunos-inativos}" class="btn btn-outline-primary">Clique Aqui</a>
+                </div>
+            </div>
+
+            <div class="card ml-3" style="width: 288px;">
+                <a th:href="@{/alunos-cancelados}"><img src="images/Alunos-Cancelados.jpg" alt="Alunos Cancelados" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Alunos Cancelados</h5>
+                    <p class="card-text">Busque por todos os alunos que estão cancelados no sistema.</p>
+                    <a th:href="@{/alunos-cancelados}" class="btn btn-outline-primary">Clique Aqui</a>
+                </div>
+            </div>
+
+            <div class="card mt-3" style="width: 288px;">
+                <a th:href="@{/alunos-trancados}"><img src="images/Alunos-Trancados.jpg" alt="Alunos Trancados" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title">Alunos Trancados</h5>
+                    <p class="card-text">Busque por todos os alunos que estão trancados no sistema.</p>
+                    <a th:href="@{/alunos-trancados}" class="btn btn-outline-primary">Clique Aqui</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- MainJS -->
+    <script src="javascript/main.js"></script>
+
+</body>
+</html>
