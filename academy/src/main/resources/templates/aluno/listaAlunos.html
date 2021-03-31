@@ -36,6 +36,7 @@
                 <th scope="col">Matricula</th>
                 <th scope="col">Status</th>
                 <th scope="col">Turno</th>
+                <th scope="col">Ações</th>
             </thead>
 
             <tbody>
@@ -45,6 +46,12 @@
                     <td th:text="${alunos.matricula}"></td>
                     <td th:text="${alunos.status}"></td>
                     <td th:text="${alunos.turno}"></td>
+
+                    <td>
+                        <a class="action-form" th:href="@{editar/{id}(id=${alunos.id})}">Editar</a>
+                        <a class="action-form" style="margin-left: 15px; color:red;" th:href="@{excluir/{id}(id=${alunos.id})}">Excluir</a>
+                    </td>
+
                 </tr>
             </tbody>
 

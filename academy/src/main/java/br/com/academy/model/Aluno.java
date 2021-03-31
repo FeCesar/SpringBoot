@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 import br.com.academy.enums.Curso;
 import br.com.academy.enums.Status;
 import br.com.academy.enums.Turno;
