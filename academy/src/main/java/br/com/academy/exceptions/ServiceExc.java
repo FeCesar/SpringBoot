@@ -1,8 +1,8 @@
 package br.com.academy.exceptions;
 
-public class CriptoExistException extends Exception{
+public class ServiceExc extends Exception{
     
-    public CriptoExistException(String message){
+    public ServiceExc(String message){
         super(message);
     }
 

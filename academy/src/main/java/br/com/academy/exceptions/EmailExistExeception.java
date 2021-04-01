@@ -2,12 +2,10 @@ package br.com.academy.exceptions;
 
 public class EmailExistExeception extends Exception{
     
-    // Construct
     public EmailExistExeception(String message){
         super(message);
     }
 
-    private static final long serialVerionIUD = 1L;
-
+    private static final long serialVersionUID = 1L;
 
 }

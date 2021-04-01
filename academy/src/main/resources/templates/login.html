@@ -32,21 +32,25 @@
                     <p>Insira suas credenciais para efetuar o login no sistema.</p>
                 </div>
 
-                <form action="" method="post">
+                <form method="post" action="/login" th:object="${usuario}">
 
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username">
+                    <div class="alert alert-danger" role="alert" th:if="${msg}">
+                        <strong th:text="${msg}"></strong>
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="text" class="form-control" th:field="*{user}" placeholder="Username">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" th:field="*{senha}" placeholder="Password">
                     </div>
 
                     <div class="cadastro">
                         <p>Não tem cadastro? <a th:href="@{/cadastro}">Clique Aqui.</a></p>
                     </div>
 
-                    <button th:href="@{/valida-login}" type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
 
                 </form>
             </div>
