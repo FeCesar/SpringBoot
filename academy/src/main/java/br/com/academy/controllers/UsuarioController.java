@@ -34,7 +34,7 @@ public class UsuarioController {
     public ModelAndView cadastrar(Usuario usuario){
         ModelAndView mv = new ModelAndView();
         usuarioRepositorio.save(usuario);
-        mv.setViewName("redirect:/index");
+        mv.setViewName("redirect:/");
         return mv;
     }
 
