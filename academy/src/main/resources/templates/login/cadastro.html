@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Felipe Cesar">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/login.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Font -->
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link href = "https://fonts.googleapis.com/css2? family = Noto + Sans + JP: wght @ 100; 400; 700 & display = swap "rel =" stylesheet ">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+
+    <title>Academy - Cadastro</title>
+</head>
+<body>
+
+    <div class="login-form">
+        <div class="container">
+            <div class="main-div">
+
+                <div class="texto-header">
+                    <h2>Crie seu Usuário no Sitema</h2>
+                    <p>Insira suas credenciais para criar seu login no sistema.</p>
+                </div>
+
+                <form action="salvarUsuario" method="post" th:object="${usuario}">
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" th:field="*{email}" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" th:field="*{user}" placeholder="Username">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" th:field="*{senha}" placeholder="Password">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <button type="button" class="btn btn-info">Voltar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
